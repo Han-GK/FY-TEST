@@ -10,4 +10,3 @@ RUN rm -rf /etc/localtime && ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localt
 EXPOSE 49101
 ENTRYPOINT ["npm","run"]
 CMD ["start"]
-#测试一下
