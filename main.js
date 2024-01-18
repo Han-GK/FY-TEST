@@ -10,7 +10,9 @@ function node_main() {
     router.get('/api/v1/data', controller.getSysInfo);
     router.get('/data', controller.getData)
     server.listen(OsUtil.port, function () { console.log("服务器启动完毕,端口：" + OsUtil.port) });
-    open.exec('start http://127.0.0.1:' + OsUtil.port + '/index.html')
+    setTimeout(() => {
+        open.exec('start http://127.0.0.1:' + OsUtil.port + '/index.html')
+    }, 3000);
 }
 
 node_main()

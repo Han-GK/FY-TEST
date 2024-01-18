@@ -1,5 +1,6 @@
 let url = require("url");
 let fs = require("fs")
+var OsUtil = require('../utils/serverInfo');
 
 let urls = {};
 
@@ -15,8 +16,9 @@ let router = (req, res) => {
         } else {
             // 然后判断路径是否在我们申明的路径集合当中
             if (!urls[pathname]) {
-                res.status = 404;// 设置状态码
-                res.end("404");
+                res.status = 200;
+                res.setHeader("Content-Type", "text/html;charset=utf-8");
+                res.end(`<meta charset="UTF-8"><h1>IP地址：${OsUtil.ipaddr} <br/> 端口：${OsUtil.port}</h1>`);
             } else {
                 urls[pathname](req, res);
             }
@@ -25,7 +27,7 @@ let router = (req, res) => {
 }
 
 router.static = (path) => {
-    router.basepath= path
+    router.basepath = path
 }
 router.get = (url, cb) => {
     urls[url] = cb

@@ -28,7 +28,6 @@ function showCpuInfo() {
     };
     ajax.onreadystatechange = function () {
         if (ajax.response) {
-            console.log(ajax.response);
             var data = JSON.parse(ajax.response);
             cpu.innerHTML = data.cpu;
             mem.innerHTML = data.mem;

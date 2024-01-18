@@ -4,7 +4,8 @@
   "description": "this is Lengff first nodejs demo",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node main.js",
+    "build": "npx pkg -t win main.js"
   },
   "author": "Lengff",
   "license": "ISC",
@@ -17,7 +18,13 @@
     "scripts": "start",
     "targets": [
       "node12-win-x64"
+    ],
+    "assets": [
+      "/src/assets/**"
     ]
   },
-  "bin": "./main.js"
+  "bin": "./main.js",
+  "bundledDependencies": [
+    "express"
+  ]
 }
