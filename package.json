@@ -1,0 +1,23 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "this is Lengff first nodejs demo",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Lengff",
+  "license": "ISC",
+  "dependencies": {
+    "os-utils": "^0.0.14",
+    "server": "^1.0.38",
+    "systeminformation": "^5.21.22"
+  },
+  "pkg": {
+    "scripts": "start",
+    "targets": [
+      "node12-win-x64"
+    ]
+  },
+  "bin": "./main.js"
+}

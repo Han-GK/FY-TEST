@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lengff哥哥说我好棒</title>
+</head>
+
+<body>
+    <h3>Lengff哥哥好帅</h3>
+    <div class="server-box">
+        <div class="server-card">
+            <label>挨踢地址：</label>
+            <span id="ipaddr"></span>
+        </div>
+        <div class="server-card">
+            <label>端口：</label>
+            <span id="port"></span>
+        </div>
+    </div>
+    <div class="cpu-box">
+        <div class="box-card">
+            <label>CPU</label>
+            <span id="cpu"></span>
+        </div>
+        <div class="box-card">
+            <label>内存</label>
+            <span id="mem"></span>
+        </div>
+        <div class="box-card">
+            <label>上行</label>
+            <span id="upload"></span>
+        </div>
+        <div class="box-card">
+            <label>下行</label>
+            <span id="download"></span>
+        </div>
+        <div class="box-card">
+            <label>温度</label>
+            <span id="temp"></span>
+        </div>
+    </div>
+
+    <div class="tip-box">
+        <p>1. Windows目前CPU温度信息无法获取，敬请谅解。</p>
+        <p>2. 如果需要ESP小电视实时监控，请保证程序在后台运行</p>
+        <p>3. 冷哥唯一联系方式：QQ: 1286396784，有事QQ电话</p>
+    </div>
+
+    <script src="demo.js"></script>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+    font-size: 16px;
+    margin: 0 15px;
+    z-index: 0;
+    color: #2d2d2d;
+    }
+
+
+    h3 {
+        text-align: center;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    .server-box {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .server-card {
+        height: 40px;
+        background: #ededed;
+        border-radius: 5px;
+        margin: 5px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .server-card label {
+        width: 25%;
+        font-weight: 600;
+        font-size: 18px;
+        text-align: end;
+    }
+
+    .server-card span {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .cpu-box {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .box-card {
+        width: 22%;
+        height: 70px;
+        background: #ededed;
+        border-radius: 10px;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .box-card label {
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .box-card span {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .tip-box {
+        width: 100%;
+        color: #333;
+        line-height: 26px;
+    }
+</style>
+
+</html>
